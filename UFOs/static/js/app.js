@@ -27,7 +27,7 @@ function buildTable(data) {
 function handleClick() {
     // grab datetime value from the filter
     let date = d3.select ("#datetime").property("value");
-    let filterData = tableData;
+    let filteredData = tableData;
     //check to see if a date was entered & filter the data using that date
     if (date) {
         //apply 'filter' to table data to only keep 
@@ -43,4 +43,4 @@ function handleClick() {
 d3.selectAll("#filter-btn").on("click", handleClick);
 
 // build the table when the page loads
-buildTable(tableDate);
+buildTable(tableData);
